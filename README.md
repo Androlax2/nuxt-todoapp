@@ -2,7 +2,7 @@
 
 Design coming from [https://www.figma.com/community/file/1124486462945035586](https://www.figma.com/community/file/1124486462945035586)
 
-![](demo.mov)
+![](demo.gif)
 
 ## Build Setup
 
