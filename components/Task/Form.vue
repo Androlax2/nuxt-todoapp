@@ -33,6 +33,7 @@ export default defineComponent({
       return this.$el.querySelector('input')
     }
   },
+  
   methods: {
     addTask() {
       if (!this.$input) {
