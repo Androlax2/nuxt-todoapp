@@ -1,40 +1,40 @@
 <template>
   <div class="tasks">
     <div v-if="tasks.length > 0" class="tasks-list">
-        <TaskItem
-          v-for="task in tasks"
-          :key="task.id"
-          :task="task"
-        />
+      <TaskItem v-for="task in tasks" :key="task.id" :task="task" />
     </div>
     <div class="tasks-meta">
-      <p class="tasks-count">{{ tasks.length }} Item<span v-if="tasks.length > 1">s</span></p>
+      <p class="tasks-count">
+        {{ tasks.length }} Item<span v-if="tasks.length > 1">s</span>
+      </p>
       <button
         v-if="tasks.length > 0 && hasCompletedTasks()"
         class="tasks-clear-complete"
         @click="clearCompletedTasks()"
-      >Clear Complete</button>
+      >
+        Clear Complete
+      </button>
     </div>
   </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
+import { mapMutations } from 'vuex'
 
 export default {
   computed: {
     tasks() {
-      return this.$store.state.tasks.tasks;
+      return this.$store.state.tasks.tasks
     },
   },
   methods: {
     hasCompletedTasks() {
-      return this.tasks.some((task) => task.done);
+      return this.tasks.some((task) => task.done)
     },
     ...mapMutations({
       clearCompletedTasks: 'tasks/clearCompletedTasks',
     }),
-  }
+  },
 }
 </script>
 
@@ -43,7 +43,7 @@ export default {
   --tasks-divider-height: 4px;
   --tasks-sides-padding: 1.625rem;
 
-  background-color: #25273C;
+  background-color: #25273c;
   width: 100%;
 }
 
@@ -96,10 +96,10 @@ export default {
   gap: clamp(0.75rem, 3vw, 1.5rem);
   align-items: center;
   justify-content: space-between;
-  border: 2px solid #AD02FE;
+  border: 2px solid #ad02fe;
   font-size: clamp(0.85rem, 3.5vw, 1.5rem);
   letter-spacing: 0.1em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 // =============================================
@@ -110,5 +110,4 @@ export default {
   all: unset;
   cursor: pointer;
 }
-
 </style>

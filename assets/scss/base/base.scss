@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
-  color: #FFF;
+  color: #fff;
   font-weight: 400;
   line-height: 1.2;
   padding: 1rem;
@@ -62,12 +62,12 @@ table {
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #FFF inset;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
 }
 
 // Safari auto fill credentials color
 input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 small {
@@ -109,6 +109,5 @@ sub {
 
 html.so-keyboard-user *:focus {
   outline-style: solid !important;
-  outline-color: #AD02FE !important;
+  outline-color: #ad02fe !important;
 }
-

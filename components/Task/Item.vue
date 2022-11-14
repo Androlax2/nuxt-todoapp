@@ -1,9 +1,30 @@
 <template>
   <div class="item" :data-is-done="task.done" @click="toggleTask(task)">
     <button class="done-button">
-      <svg aria-hidden="true" width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="1.59826" y1="8.55982" x2="7.67648" y2="15.5064" stroke="white" stroke-width="3"/>
-        <line x1="6.39001" y1="14.5315" x2="20.2831" y2="1.50675" stroke="white" stroke-width="3"/>
+      <svg
+        aria-hidden="true"
+        width="22"
+        height="17"
+        viewBox="0 0 22 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="1.59826"
+          y1="8.55982"
+          x2="7.67648"
+          y2="15.5064"
+          stroke="white"
+          stroke-width="3"
+        />
+        <line
+          x1="6.39001"
+          y1="14.5315"
+          x2="20.2831"
+          y2="1.50675"
+          stroke="white"
+          stroke-width="3"
+        />
       </svg>
     </button>
     <p class="title">{{ task.title }}</p>
@@ -11,8 +32,8 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from 'vue';
-import {mapMutations} from "vuex";
+import { defineComponent } from 'vue'
+import { mapMutations } from 'vuex'
 
 export default defineComponent({
   props: {
@@ -25,8 +46,8 @@ export default defineComponent({
     ...mapMutations({
       toggleTask: 'tasks/toggleTask',
     }),
-  }
-});
+  },
+})
 </script>
 
 <style lang="scss" scoped>
@@ -52,7 +73,7 @@ export default defineComponent({
     width: 50%;
     height: 45%;
     opacity: 0;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
   }
 }
 .title {
@@ -77,15 +98,19 @@ export default defineComponent({
     height: 2.5px;
     background-color: rgba(255, 255, 255, 0.5);
     opacity: 0;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
   }
 }
 
-.item[data-is-done="true"] {
+.item[data-is-done='true'] {
   --task-color: rgba(15, 144, 162, 0.57);
 
   .done-button {
-    background: linear-gradient(111.35deg, #E600FA 10.12%, rgba(82, 97, 234, 0) 82.22%);
+    background: linear-gradient(
+      111.35deg,
+      #e600fa 10.12%,
+      rgba(82, 97, 234, 0) 82.22%
+    );
     svg {
       opacity: 1;
     }

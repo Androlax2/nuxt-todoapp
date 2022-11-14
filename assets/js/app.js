@@ -1,4 +1,4 @@
-import smartOutline from 'smart-outline';
+import smartOutline from 'smart-outline'
 
 /**
  * Disabling focus outline without breaking accessibility.
@@ -7,4 +7,4 @@ import smartOutline from 'smart-outline';
  *
  * @see https://github.com/ambassify/smart-outline
  */
-smartOutline.init();
+smartOutline.init()
